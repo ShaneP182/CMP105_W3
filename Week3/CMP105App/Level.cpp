@@ -187,12 +187,12 @@ void Level::update(float dt)
 	}
 
 	// For tracking when bouncing text has reached end of screen and inverting its direction/speed
-	if (text.getPosition().x > side - 25 - 28 || text.getPosition().x < 0)
+	if (text.getPosition().x >= side - 53 || text.getPosition().x <= 0)
 	{
 		textXSpeed = -textXSpeed;
 		textXNegative = !textXNegative;
 	}
-	if (text.getPosition().y > bottom - 25 - 18|| text.getPosition().y < 0)
+	if (text.getPosition().y >= bottom - 43|| text.getPosition().y <= 0)
 	{
 		textYSpeed = -textYSpeed;
 		textYNegative = !textYNegative;
